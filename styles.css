@@ -1,0 +1,139 @@
+:root {
+  --background-color: #f9f9f9;
+  --main-color: #333;
+  --secondary-color: #555;
+  --form-background: #fff;
+  --btn-bg-clr: #4CAF50;
+  --btn-hover-clr: #45a049;
+}
+
+*::after,
+*::before {
+  transition: ease 220ms all;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--main-color);
+  text-align: center;
+}
+
+#description {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+#survey-form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: var(--form-background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.opt-label label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: var(--btn-bg-clr);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--btn-hover-clr);
+}
+.radio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+
+.radio-item input {
+    margin-right: 5px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item.right {
+    text-align: right;
+}
+
+.checkbox-item input {
+    margin-right: 5px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  #survey-form {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+
+  #survey-form {
+    max-width: 500px;
+  }
+}
